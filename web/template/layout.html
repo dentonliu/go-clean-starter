@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="zh-CN" class="{{ .pageClass }}">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1.0, maximum-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-touch-fullscreen" content="yes">
+    <meta name="format-detection" content="telephone=yes, email=no">
+    <title>{{ .title }}</title>
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <link rel="icon" href="/static/favicon.ico">
+    <link rel="stylesheet" href="/static/style.css?v=0.0.1">
+    {{block "styles" .}}
+    {{end}}
+  </head>
+  <body>
+    <noscript>
+      <strong>We're sorry but mobile doesn't work properly without JavaScript enabled. Please enable it to continue.</strong>
+    </noscript>
+    <div class="wrapper">
+      {{block "content" .}}
+      {{end}}
+    </div>
+    {{block "scripts" .}}
+    {{end}}
+  </body>
+</html>

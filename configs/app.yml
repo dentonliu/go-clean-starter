@@ -1,0 +1,10 @@
+# port to listen
+server_port: 3000
+
+# database dsn
+dsn: "root:root@/starter?charset=utf8&parseTime=True&loc=Local"
+dsn_test: "root:root@/starter_test?charset=utf8&parseTime=True&loc=Local"
+
+#JSON Web Token keys
+jwt_signing_key: 097810a8c707e988eaecb376bb8f4256
+jwt_verification_key: 097810a8c707e988eaecb376bb8f4256

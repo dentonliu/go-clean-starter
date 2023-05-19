@@ -1,0 +1,25 @@
+{{ template "layout.html" .}}
+
+{{define "content"}}
+<div class="car-index">
+    <div class="summary">{{ .paginated.Page }} of {{ .paginated.PageCount }}</div>
+    <div class="cars">
+        {{range $i,$item := .items}}
+            <div class="car">
+                <div class="car-info-item">
+                    <span><strong>Brand: </strong></span>
+                    <span>{{$item.Brand}}</span>
+                </div>
+                <div class="car-info-item">
+                    <span><strong>Color: </strong></span>
+                    <span>{{$item.Color}}</span>
+                </div>
+                <div class="car-info-item">
+                    <span><strong>Seats: </strong></span>
+                    <span>{{$item.Seats}}</span>
+                </div>
+            </div>
+        {{end}}
+    </div>
+</div>
+{{end}}
